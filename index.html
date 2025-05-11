@@ -21,6 +21,23 @@
         text-align: center;
     }
 
+        .flower-img {
+        width: 5px;  /* Or use max-width: 100%; if you want it responsive */
+        height: 5px; /* Ensure the height matches the width to maintain aspect ratio */
+        width: auto;
+        height: auto;
+        margin: 40px auto 0;
+        display: block;
+        opacity: 0;
+        transform: translateY(5px);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .flower-img.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
     .fade {
         opacity: 0;
         transform: translateY(20px);
@@ -37,26 +54,7 @@
         font-style: italic;
     }
 
-    .heart {
-        color: #3cb371;
-        font-size: 1.5rem;
-    }
-    .flower-img {
-        width: 5px;  /* Or use max-width: 100%; if you want it responsive */
-        height: 5px; /* Ensure the height matches the width to maintain aspect ratio */
-        width: auto;
-        height: auto;
-        margin: 40px auto 0;
-        display: block;
-        opacity: 0;
-        transform: translateY(5px);
-        transition: opacity 1s ease, transform 1s ease;
-    }
 
-    .flower-img.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
   </style>
 </head>
 <body>
