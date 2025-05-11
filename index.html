@@ -1,34 +1,44 @@
-<!-- mothersday.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Letter to Mom</title>
+  <title>Mother's Day Letter</title>
   <style>
     body {
       margin: 0;
-      padding: 0 1rem;
+      padding: 0;
+      background: #fffdf7;
       font-family: 'Georgia', serif;
-      background: #fffafc;
       color: #333;
-      line-height: 1.8;
+      line-height: 2.2;
+      padding: 40px;
     }
 
-    .letter {
+    .container {
       max-width: 700px;
-      margin: 100px auto;
+      margin: 0 auto;
+      font-size: 1.4rem;
     }
 
-    .paragraph {
+    .fade {
       opacity: 0;
-      transform: translateY(40px);
+      transform: translateY(20px);
       transition: opacity 0.8s ease, transform 0.8s ease;
-      margin-bottom: 2rem;
     }
 
-    .paragraph.visible {
+    .fade.visible {
       opacity: 1;
       transform: translateY(0);
+    }
+
+    .signature {
+      margin-top: 40px;
+      font-style: italic;
+    }
+
+    .heart {
+      color: #3cb371;
+      font-size: 1.5rem;
     }
   </style>
 </head>
@@ -53,9 +63,22 @@
   <p class="fade">I am glad and lucky you are my mother forever more.</p>
 
   <p class="fade">I miss you so so much</p>
-  <p class="fade">and I love you so so much.</p>
+  <p class="fade">and I love you so so much. <span class="heart">💚💚💚😘</span></p>
 
   <p class="fade signature">
     — C.Remeviere<br>
   </p>
 </div>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      entry.target.classList.toggle("visible", entry.isIntersecting);
+    });
+  });
+
+  document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
