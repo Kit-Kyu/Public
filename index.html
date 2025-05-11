@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mother's Day Letter</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fffdf7;
+      font-family: 'Georgia', serif;
+      color: #333;
+      line-height: 1.8;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .fade {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .signature {
+      margin-top: 40px;
+      font-style: italic;
+    }
+
+    .heart {
+      color: #3cb371;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <p class="fade">As Mother's Day is a special day for every child to remember a touch of guidance, a word of wisdom and a sentiment of memory. Every mother knows who their child is, but every child will remember their mother when they open their eyes the moment at their birth.</p>
+
+  <p class="fade">In the mists of loss, they will guide us like lighthouses. In the depths of emotional loss they are the guardians who strive to help our struggles.</p>
+
+  <p class="fade">In a time of distance, there is always patience and reunion that will come in arms of warmth and longing.</p>
+
+  <p class="fade"><strong>So Happy Mother's Day, Mom.</strong> I am glad and lucky you are my mother forever more.</p>
+
+  <p class="fade">I miss you so so much and I love you so so much. <span class="heart">💚💚💚😘</span></p>
+
+  <p class="fade signature">
+    — C.Remeviere<br>
+  </p>
+</div>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      entry.target.classList.toggle("visible", entry.isIntersecting);
+    });
+  });
+
+  document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
