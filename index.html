@@ -6,7 +6,6 @@
   <style>
     body {
       margin: 0;
-      text-align: center;
       padding: 0;
       background: #fffdf7;
       font-family: 'Georgia', serif;
@@ -16,30 +15,44 @@
     }
 
     .container {
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 1.4rem;
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 1.4rem;
+        text-align: center;
     }
 
     .fade {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
     }
 
     .fade.visible {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .signature {
-      margin-top: 40px;
-      font-style: italic;
+        margin-top: 40px;
+        font-style: italic;
     }
 
     .heart {
-      color: #3cb371;
-      font-size: 1.5rem;
+        color: #3cb371;
+        font-size: 1.5rem;
+    }
+    .flower-img {
+        width: 60%;
+        max-width: 400px;
+        margin-top: 40px;
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .flower-img.visible {
+        opacity: 1;
+        transform: translateY(0);
     }
   </style>
 </head>
@@ -68,6 +81,9 @@
 
   <p class="fade signature">
     — C.Remeviere<br>
+
+<img src="flowers.png" alt="Flowers" class="flower-img fade" />
+
   </p>
 </div>
 
