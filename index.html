@@ -42,14 +42,15 @@
         font-size: 1.5rem;
     }
     .flower-img {
-        width: 25px;
-        height: auto;
+        width: 25px;  /* Or use max-width: 100%; if you want it responsive */
+        height: 25px; /* Ensure the height matches the width to maintain aspect ratio */
         margin: 40px auto 0;
         display: block;
         opacity: 0;
         transform: translateY(40px);
         transition: opacity 1s ease, transform 1s ease;
     }
+
 
 
     .flower-img.visible {
